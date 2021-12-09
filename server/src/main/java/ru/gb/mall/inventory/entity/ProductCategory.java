@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Table(name = "PRODUCT_CATEGORIES")
@@ -16,12 +15,11 @@ import javax.persistence.Table;
 public class ProductCategory {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_idGenerator")
-    @SequenceGenerator(name = "seq_idGenerator", sequenceName = "seq_productCategoryId", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
     private long id;
 
-    @Column(name = "NAME", nullable = false, unique = true, columnDefinition = "VARCHAR", length = 50)
+    @Column(name = "NAME", nullable = false, unique = true, length = 50)
     private String name;
 
 }
