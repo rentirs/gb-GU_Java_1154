@@ -4,14 +4,14 @@ server:
 
 spring:
   datasource:
-    username: <changeit>
-    password: <changeit>
-    url: <changeit>
+    username: gb
+    password: geekbrains
+    url: jdbc:mysql://192.168.1.100:3306/mall_inventory
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
 
   mail:
     host: smtp.google.com
