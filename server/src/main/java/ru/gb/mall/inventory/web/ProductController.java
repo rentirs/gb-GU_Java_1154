@@ -1,10 +1,9 @@
 package ru.gb.mall.inventory.web;
 
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.gb.mall.inventory.entity.Product;
 import ru.gb.mall.inventory.service.ProductService;
 
@@ -30,4 +29,18 @@ public class ProductController {
         return ResponseEntity.ok(productService.findById(id));
     }
 
+    @PostMapping("/add")
+    public ResponseEntity<Product> addProduct(@RequestBody Product product) {
+        return ResponseEntity.accepted().body(productService.add(product));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteProduct(@PathVariable("id") long id) {
+        if (!productService.isPresent(id)) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product id:" + id + " not found");
+        } else {
+            productService.deleteById(id);
+            return ResponseEntity.status(HttpStatus.ACCEPTED).body("Product id:" + id + " has been deleted");
+        }
+    }
 }

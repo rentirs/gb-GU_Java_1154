@@ -5,6 +5,7 @@ import ru.gb.mall.inventory.entity.Product;
 import ru.gb.mall.inventory.exception.EntityNotFoundException;
 import ru.gb.mall.inventory.repository.ProductRepository;
 
+import java.net.URI;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.StreamSupport;
@@ -27,8 +28,19 @@ public class ProductService {
         try {
             return productRepository.findById(id).orElseThrow();
         } catch (NoSuchElementException e) {
-            throw new EntityNotFoundException("Product entity no found by id: " + id, e);
+            throw new EntityNotFoundException("Product entity not found by id: " + id, e);
         }
     }
 
+    public Product add(Product product) {
+        return productRepository.save(product);
+    }
+
+    public void deleteById(long id) {
+        productRepository.deleteById(id);
+    }
+
+    public boolean isPresent(long id) {
+        return productRepository.existsById(id);
+    }
 }

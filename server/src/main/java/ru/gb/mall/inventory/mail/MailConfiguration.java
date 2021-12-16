@@ -1,8 +1,6 @@
 package ru.gb.mall.inventory.mail;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.util.Properties;
@@ -19,8 +17,8 @@ public class MailConfiguration {
 
         Properties props = sender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");
-        props.put("mail.smpt.auth", "true");
-        props.put("mail.smpt.starttls.enable", "true");
+        props.put("mail.smptp.auth", "true");
+        props.put("mail.smptp.starttls.enable", "true");
         props.put("mail.debug", "true");
 
         return sender;
