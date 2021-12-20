@@ -1,6 +1,5 @@
 package ru.gb.mall.inventory.web;
 
-import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
