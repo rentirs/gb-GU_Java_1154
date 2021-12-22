@@ -3,10 +3,8 @@ package ru.gb.mall.inventory.web;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.gb.mall.inventory.entity.Warehouse;
 import ru.gb.mall.inventory.entity.WarehouseKeeper;
 import ru.gb.mall.inventory.service.WarehouseKeeperService;
-import ru.gb.mall.inventory.service.WarehouseService;
 
 import java.util.List;
 

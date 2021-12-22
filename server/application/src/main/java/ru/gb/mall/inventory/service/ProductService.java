@@ -5,7 +5,6 @@ import ru.gb.mall.inventory.entity.Product;
 import ru.gb.mall.inventory.exception.EntityNotFoundException;
 import ru.gb.mall.inventory.repository.ProductRepository;
 
-import java.net.URI;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.StreamSupport;

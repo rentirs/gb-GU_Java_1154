@@ -1,11 +1,9 @@
 package ru.gb.mall.inventory.service;
 
 import org.springframework.stereotype.Service;
-import ru.gb.mall.inventory.entity.Warehouse;
 import ru.gb.mall.inventory.entity.WarehouseKeeper;
 import ru.gb.mall.inventory.exception.EntityNotFoundException;
 import ru.gb.mall.inventory.repository.WarehouseKeeperRepository;
-import ru.gb.mall.inventory.repository.WarehouseRepository;
 
 import java.util.List;
 import java.util.NoSuchElementException;

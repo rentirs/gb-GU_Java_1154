@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import ru.gb.mall.inventory.entity.WarehouseItem;
 import ru.gb.mall.inventory.entity.WarehouseKeeper;
 import ru.gb.mall.inventory.mail.EmailService;
-import ru.gb.mall.inventory.mail.message.AttachmentMailMessage;
 import ru.gb.mall.inventory.mail.message.EmailMessage;
 import ru.gb.mall.inventory.repository.WarehouseItemRepository;
 import ru.gb.mall.inventory.repository.WarehouseKeeperRepository;
