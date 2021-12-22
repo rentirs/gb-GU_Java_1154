@@ -3,9 +3,7 @@ package ru.gb.mall.inventory.web;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.gb.mall.inventory.entity.Product;
 import ru.gb.mall.inventory.entity.Warehouse;
-import ru.gb.mall.inventory.service.ProductService;
 import ru.gb.mall.inventory.service.WarehouseService;
 
 import java.util.List;
